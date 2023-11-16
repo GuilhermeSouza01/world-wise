@@ -1,18 +1,40 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMap,
+  useMapEvents,
+} from "react-leaflet";
 import styles from "./Map.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCities } from "../contexts/CitiesContext";
 const Map = () => {
-  const navigate = useNavigate();
   const { cities } = useCities();
 
   const [mapPosition, setMapPosition] = useState([40, 0]);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
-  const lat = searchParams.get("lat");
-  const lng = searchParams.get("lng");
+  const mapLat = searchParams.get("lat");
+  const mapLng = searchParams.get("lng");
+
+  useEffect(
+    function () {
+      if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
+    },
+    [mapLat, mapLng]
+  );
+
+  const flagemojiToPNG = (flag) => {
+    var countryCode = Array.from(flag, (codeUnit) => codeUnit.codePointAt())
+      .map((char) => String.fromCharCode(char - 127397).toLowerCase())
+      .join("");
+    return (
+      <img src={`https://flagcdn.com/24x18/${countryCode}.png`} alt="flag" />
+    );
+  };
 
   return (
     <div
@@ -23,7 +45,7 @@ const Map = () => {
     >
       <MapContainer
         center={mapPosition}
-        zoom={13}
+        zoom={6}
         scrollWheelZoom={true}
         className={styles.map}
       >
@@ -37,13 +59,30 @@ const Map = () => {
             key={city.id}
           >
             <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
+              <span>{flagemojiToPNG(city.emoji)}</span>{" "}
+              <span>{city.cityName}</span>
             </Popup>
           </Marker>
         ))}
+        <ChangeCenter position={mapPosition} />
+        <DetectClick />
       </MapContainer>
     </div>
   );
 };
+
+// eslint-disable-next-line react/prop-types
+function ChangeCenter({ position }) {
+  const map = useMap();
+  map.setView(position);
+  return null;
+}
+
+function DetectClick() {
+  const navigate = useNavigate();
+  useMapEvents({
+    click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
+  });
+}
 
 export default Map;
