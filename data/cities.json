@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
-      "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
-    },
-    {
       "cityName": "Berlin",
       "country": "Germany",
       "emoji": "🇩🇪",
@@ -49,18 +37,6 @@
       "id": 98443201
     },
     {
-      "cityName": "Brasilia",
-      "country": "Brazil",
-      "emoji": "🇧🇷",
-      "date": "2024-03-19T16:22:38.341Z",
-      "notes": "teste",
-      "position": {
-        "lat": "-15.798934161768933",
-        "lng": "-47.870802168022465"
-      },
-      "id": 98443202
-    },
-    {
       "cityName": "Delhi",
       "country": "India",
       "emoji": "🇮🇳",
@@ -71,6 +47,42 @@
         "lng": "77.255859375"
       },
       "id": 98443203
+    },
+    {
+      "cityName": "Mirabela",
+      "country": "Brazil",
+      "emoji": "🇧🇷",
+      "date": "2024-03-20T17:20:12.123Z",
+      "notes": "test",
+      "position": {
+        "lat": "-16.252912145507434",
+        "lng": "-44.16229248046875"
+      },
+      "id": 98443204
+    },
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-03-20T19:20:37.732Z",
+      "notes": "asdasd",
+      "position": {
+        "lat": "40.36328834091583",
+        "lng": "-3.6914062500000004"
+      },
+      "id": 98443205
+    },
+    {
+      "cityName": "Springfield",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2024-03-20T19:24:25.173Z",
+      "notes": "sadasda",
+      "position": {
+        "lat": "37.68599392939966",
+        "lng": "-85.22094726562501"
+      },
+      "id": 98443206
     }
   ]
 }

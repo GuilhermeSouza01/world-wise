@@ -62,9 +62,6 @@ function CitiesProvider({ children }) {
   const [{cities, isLoading, currentCity}, dispatch] = useReducer(reducer, initialState);
 
 
-  // const [cities, setCities] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [currentCity, setCurrentCity] = useState({});
 
   useEffect(() => {
     async function fetchCities() {
@@ -84,6 +81,8 @@ function CitiesProvider({ children }) {
   }, []);
 
   async function getCity(id) {
+
+    if(Number(id) === currentCity.id) return;
 
     dispatch({ type: "loading" });
     try {
@@ -153,7 +152,7 @@ function CitiesProvider({ children }) {
 function useCities() {
   const context = useContext(CitiesContext);
   if (context === undefined)
-    throw new Error("Citiescontext was used outside the CitiesProvider");
+    throw new Error("Cities context was used outside the CitiesProvider");
   return context;
 }
 
