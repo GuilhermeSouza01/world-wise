@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -35,6 +23,54 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Montes Claros",
+      "country": "Brazil",
+      "emoji": "🇧🇷",
+      "date": "2024-03-18T19:38:57.112Z",
+      "notes": "teste2",
+      "position": {
+        "lat": "-16.699340234594537",
+        "lng": "-43.802490234375"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Washington",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2023-07-12T19:59:20.000Z",
+      "notes": "teste",
+      "position": {
+        "lat": "38.82259097617713",
+        "lng": "-77.08007812500001"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Brasilia",
+      "country": "Brazil",
+      "emoji": "🇧🇷",
+      "date": "2024-03-19T16:22:38.341Z",
+      "notes": "teste",
+      "position": {
+        "lat": "-15.798934161768933",
+        "lng": "-47.870802168022465"
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "Delhi",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2024-03-20T15:28:49.264Z",
+      "notes": "teste",
+      "position": {
+        "lat": "28.65203063036226",
+        "lng": "77.255859375"
+      },
+      "id": 98443203
     }
   ]
 }
