@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useContext, useReducer } from "react";
+import { useCallback, useContext, useReducer } from "react";
 import { createContext, useEffect } from "react";
 
 const BASE_URL = "http://localhost:3001";
@@ -80,7 +80,7 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  async function getCity(id) {
+  const getCity = useCallback(async function getCity(id) {
 
     if(Number(id) === currentCity.id) return;
 
@@ -92,7 +92,7 @@ function CitiesProvider({ children }) {
     } catch (error) {
       dispatch({type: 'rejected', payload :"There was an error loading the city..."});
     } 
-  }
+  }, [currentCity.id]);
 
   async function createCity(newCity) {
 
