@@ -6,7 +6,7 @@ Aplicativo React para registrar e explorar os lugares que você já visitou. Des
 
 ## 🚀 Tecnologias
 
-- React + JavaScript (ou TypeScript)
+- React + JavaScript 
 - React Router (navegação SPA)
 - Context API para estado global (usuário, locais, filtros)
 - Leaflet.js para renderização de mapas
