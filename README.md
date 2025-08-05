@@ -1,6 +1,6 @@
 # 🌍 WorldWise – Travel Map Notes
 
-Aplicativo React para registrar e explorar os lugares que você já visitou. Desenvolvido no *Ultimate React Course* com Jonas Schmedtmann, incorpora conceitos como React Router, Context API, e mapas interativos com **Leaflet** :contentReference[oaicite:3]{index=3}.
+Aplicativo React para registrar e explorar os lugares que você já visitou. Desenvolvido no *Ultimate React Course* com Jonas Schmedtmann, incorpora conceitos como React Router, Context API, e mapas interativos com **Leaflet**.
 
 ---
 
@@ -26,8 +26,24 @@ Aplicativo React para registrar e explorar os lugares que você já visitou. Des
 
 ## 🛠️ Instalação & Execução
 
-1. Clone o repositório:
+Clone o repositório:
 
 ```bash
 git clone https://github.com/GuilhermeSouza01/world-wise.git
 cd world-wise
+```
+Instale dependências:
+```bash
+npm install
+# ou
+yarn install
+```
+Inicie o servidor mock JSON:
+```bash
+npm run server
+```
+Em outro terminal, execute a aplicação React:
+```bash
+npm run dev
+```
+Acesse http://localhost:3000 no navegador.
